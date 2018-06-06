@@ -3,3 +3,13 @@
 
 // Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Components
+@import "../components/Header/Header";
+@import "../components/Layout/Layout";
+
+// Containers
+@import "../containers/AboutPage/AboutPage";
+@import "../containers/HomePage/HomePage";
+@import "../containers/PostPage/PostPage";
+
