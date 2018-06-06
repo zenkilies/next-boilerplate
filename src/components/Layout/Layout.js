@@ -2,7 +2,7 @@ import React from "react";
 
 import {Header} from "./../../components";
 
-import "./../../styles/index.scss";
+import "../../styles/index.scss";
 
 class Layout extends React.Component {
 

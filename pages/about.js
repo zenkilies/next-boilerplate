@@ -1,19 +1,3 @@
-import React from "react";
-
-import {Layout} from "./../components";
-
-class AboutPage extends React.Component {
-
-  render() {
-
-    return (
-      <Layout>
-        <p>This is About page.</p>
-      </Layout>
-    );
-
-  }
-
-}
+import AboutPage from "./../src/containers/AboutPage/AboutPage";
 
 export default AboutPage;
