@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 import {Header} from "./../../components";
@@ -21,5 +22,12 @@ class Layout extends React.Component {
   }
 
 }
+
+Layout.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ])
+};
 
 export default Layout;

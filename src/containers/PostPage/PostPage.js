@@ -1,8 +1,11 @@
 import fetch from "isomorphic-unfetch";
 
+import PropTypes from "prop-types";
 import React from "react";
 
 import {Layout} from "./../../components";
+
+/*eslint no-console: "off"*/
 
 class PostPage extends React.Component {
 
@@ -13,7 +16,7 @@ class PostPage extends React.Component {
     return (
       <Layout>
         <h1>{show.name}</h1>
-        <p>{show.summary.replace(/<[/]?p>/g, '')}</p>
+        <p>{show.summary.replace(/<[/]?p>/g, "")}</p>
         <img src={show.image["medium"]}/>
       </Layout>
     );
@@ -36,6 +39,10 @@ PostPage.getInitialProps = async function (context) {
     show: show
   };
 
+};
+
+PostPage.propTypes = {
+  show: PropTypes.object
 };
 
 export default PostPage;

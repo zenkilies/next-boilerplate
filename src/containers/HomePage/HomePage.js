@@ -1,11 +1,26 @@
 import fetch from "isomorphic-unfetch";
 
 import Link from "next/link";
+import PropTypes from "prop-types";
 import React from "react";
 
 import {Layout} from "./../../components";
 
+/*eslint no-console: "off"*/
+
 class HomePage extends React.Component {
+
+  renderShow(id, title) {
+
+    return (
+      <li key={id}>
+        <Link as={`/post/${id}`} href={`/post?id=${id}`}>
+          <a>{title}</a>
+        </Link>
+      </li>
+    );
+
+  }
 
   render() {
 
@@ -13,9 +28,7 @@ class HomePage extends React.Component {
       <Layout>
         <h1>My Blog</h1>
         <ul>
-          {this.props.shows.map(record => (
-            <PostLink key={record.show.id} id={record.show.id} title={record.show.name}/>
-          ))}
+          {this.props.shows.map(record => this.renderShow(record.show.id, record.show.name))}
         </ul>
       </Layout>
     );
@@ -38,12 +51,8 @@ HomePage.getInitialProps = async function () {
 
 };
 
-export default HomePage;
+HomePage.propTypes = {
+  shows: PropTypes.arrayOf(PropTypes.object)
+};
 
-const PostLink = (props) => (
-  <li>
-    <Link as={`/post/${props.id}`} href={`/post?id=${props.id}`}>
-      <a>{props.title}</a>
-    </Link>
-  </li>
-);
+export default HomePage;

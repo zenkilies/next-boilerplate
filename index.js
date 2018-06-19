@@ -1,6 +1,8 @@
 const express = require("express");
 const next = require("next");
 
+/*eslint no-console: "off"*/
+
 require("dotenv").config();
 
 const app = next({
