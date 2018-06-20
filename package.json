@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "next build",
+    "build": "npm-run-all gulp next:build",
+    "gulp": "gulp",
     "lint": "esw index.js next.config.js pages src",
     "lint:watch": "npm run lint -- --watch",
     "next": "npm-run-all --parallel start lint:watch",
+    "next:build": "next build",
     "start": "node index"
   },
   "keywords": [],
@@ -35,6 +37,8 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-react": "^7.9.1",
     "eslint-watch": "^3.1.5",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
     "npm-run-all": "^4.1.3"
   }
 }
