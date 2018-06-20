@@ -1,6 +1,8 @@
 const express = require("express");
 const next = require("next");
 
+global["__IS_SERVER__"] = true;
+
 /*eslint no-console: "off"*/
 
 require("dotenv").config();
