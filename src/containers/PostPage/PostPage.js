@@ -14,7 +14,7 @@ class PostPage extends React.Component {
     const {show} = this.props;
 
     return (
-      <Layout>
+      <Layout className="container mt-5">
         <h1>{show.name}</h1>
         <p>{show.summary.replace(/<[/]?p>/g, "")}</p>
         <img src={show.image["medium"]}/>

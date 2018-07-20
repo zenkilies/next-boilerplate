@@ -25,7 +25,7 @@ class HomePage extends React.Component {
   render() {
 
     return (
-      <Layout>
+      <Layout className="container mt-5">
         <h1>My Blog</h1>
         <ul>
           {this.props.shows.map(record => this.renderShow(record.show.id, record.show.name))}

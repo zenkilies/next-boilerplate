@@ -9,15 +9,17 @@ class Layout extends React.Component {
 
   render() {
 
+    const {children, ...moreProps} = this.props;
+
     return (
-      <div className="container mt-5">
+      <section {...moreProps}>
 
         <Header/>
 
-        {this.props.children}
+        {children}
 
-      </div>
-    );
+      </section>
+    )
 
   }
 
