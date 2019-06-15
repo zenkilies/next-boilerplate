@@ -1,3 +1,3 @@
-import AboutPage from "./../src/containers/AboutPage/AboutPage";
+import AboutPage from "../appsrc/containers/AboutPage/AboutPage";
 
 export default AboutPage;

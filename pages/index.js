@@ -1,3 +1,3 @@
-import IndexPage from "./../src/containers/IndexPage/IndexPage";
+import IndexPage from "../appsrc/containers/IndexPage/IndexPage";
 
 export default IndexPage;
