@@ -17,6 +17,7 @@ class MyApp extends App {
     return (
       <Container>
         <Provider store={reduxStore}>
+          <Injector.AnalyticsInjector/>
           <Injector.RoutingInjector/>
           <Component {...pageProps} />
         </Provider>

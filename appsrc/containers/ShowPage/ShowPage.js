@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 import Head from "next/head";
 import React from "react";
 
-import {Layout} from "./../../components";
+import {Layout} from "../../components";
 
 const ShowPage = ({show}) => (
   <Layout>

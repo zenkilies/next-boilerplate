@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
-import {Layout} from "./../../components";
+import {Layout} from "../../components";
 
 const IndexPage = (props) => (
   <Layout>

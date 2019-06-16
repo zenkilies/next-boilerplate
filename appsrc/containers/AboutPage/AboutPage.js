@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 
-import {Layout} from "./../../components";
+import {Layout} from "../../components";
 
 const AboutPage = () => (
   <Layout>

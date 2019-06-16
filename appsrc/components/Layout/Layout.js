@@ -1,8 +1,8 @@
 import React from "react";
 
-import Header from "./../Header/Header";
+import Header from "../Header/Header";
 
-import "./../../styles/main.scss";
+import "../../styles/main.scss";
 
 class Layout extends React.Component {
   render() {
