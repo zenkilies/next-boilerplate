@@ -1,47 +1,28 @@
+import {Provider} from "react-redux";
 import App, {Container} from "next/app";
 import React from "react";
-import Router from "next/router";
+
+import {Injector} from "../appsrc/components";
+
+import withReduxStore from "../appsrc/states/with-redux";
 
 class MyApp extends App {
-  static async getInitialProps({Component, ctx}) {
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-
-    return {pageProps};
-  }
-
   constructor(props) {
     super(props);
-    Router.events.on("routeChangeStart", routeChangeStart);
-    Router.events.on("routeChangeComplete", routeChangeComplete);
   }
 
   render() {
-    const {Component, pageProps} = this.props;
+    const {Component, pageProps, reduxStore} = this.props;
 
     return (
       <Container>
-        <Component {...pageProps} />
+        <Provider store={reduxStore}>
+          <Injector.RoutingInjector/>
+          <Component {...pageProps} />
+        </Provider>
       </Container>
     );
   }
 }
 
-export default MyApp;
-
-/**
- * @param {string} url
- */
-function routeChangeStart(url) {
-  // TODO: Custom event goes here...
-}
-
-/**
- * @param {string} url
- */
-function routeChangeComplete(url) {
-  // TODO: Custom event goes here...
-}
+export default withReduxStore(MyApp);
