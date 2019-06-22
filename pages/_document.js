@@ -11,6 +11,7 @@ export default class MyDocument extends Document {
     return (
       <html>
       <Head>
+        <link rel="icon" type="image/png" href="/static/favicon.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
       </Head>
       <body>
